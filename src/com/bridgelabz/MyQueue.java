@@ -20,7 +20,16 @@ public class MyQueue {
             rear = node;
         }
     }
-
+    /* This method is used to delete elements from the queue */
+    public void dequeue() {
+        if (front == null)
+            System.out.println("Queue Underflow");
+        else {
+            MyNode temp = front;
+            System.out.println("Dequeued element is " + temp.key);
+            front = front.next;
+        }
+    }
     /* This Method is used to display the elements in Queue. */
     public void display() {
         if (front == null)
